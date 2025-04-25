@@ -9,18 +9,47 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Owl Support</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="cvent.html">Cvent</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="roomsupport.html">Room Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="eventsupport.html">Event Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <h1>Owl Support</h1>
-      <p>We provide in-room AV support, Cvent licensing and support, and online meeting support. </p>
+      <div class="row">
+        <div class="col-md-6 hero-image"></div>
+        <div class="col-md-6 hero-content">
+          <h1>Owl Support</h1>
+          <p>We provide in-room support, virtual and in-person event support, and Cvent licensing.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Main Content -->
-  <div class="container mt-5">
+  <div class="container mt-5" id="services">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-12">
         <h2>Our Services</h2>
         <p>We offer in-room support and regular room checks, Cvent licenses and support, and online meeting support.</p>
         
@@ -42,13 +71,18 @@
             <div class="card-body">
               <h5 class="card-title">Online Zoom Support</h5>
               <p class="card-text">Our team can help manage your online meetings and webinars.</p>
+              <button 
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Contact Information -->
-      <div class="col-md-4">
+  <!-- Contact Information -->
+  <div class="container mt-5" id="contact">
+    <div class="row">
+      <div class="col-md-12">
         <h2>Contact Us</h2>
         <p>If you have any questions or need assistance, please contact us:</p>
         <ul class="list-group">
@@ -64,4 +98,22 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://uit.stanford.edu/services">Explore services</a>
+      <a href="https://uit.stanford.edu/service/techtraining/schedule">Get IT training</a>
+      <a href="https://uit.stanford.edu/service/authentication/twostep">Set up two-step authentication</a>
+      <a href="https://uit.stanford.edu/security/report-incident">Report a security incident</a>
+      <a href="https://uit.stanford.edu/guide/security">Learn Secure Computing Practices</a>
+    </div>
+    <div class="footer-contact">
+      <p>University IT, Stanford University</p>
+      <p>450 Jane Stanford Way, Stanford, CA 94305</p>
+      <p>Email: it-help@stanford.edu</p>
+      <p>Phone: (650) 725-4357</p>
+    </div>
+  </div>
+</footer>
 </html>
