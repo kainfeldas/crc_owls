@@ -1,20 +1,119 @@
+/* Navigation Bar */
+.navbar {
+  background-color: #8C1515 !important;
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .navbar-brand {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #FFD700 !important; /* Optional: Change the hover color */
+}
+
+/* Hero Section */
 .hero-section {
-    background: url('https://uit.stanford.edu/sites/default/files/styles/hero/public/2021-09/room-support.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  .hero-section h1 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-  .hero-section p {
-    font-size: 1.5rem;
-  }
-  
-  .card {
-    margin-bottom: 20px;
-  }
+  background-color: #f8f9fa; /* Light background color */
+  padding: 60px 0;
+}
+
+.hero-image {
+  background-image: url('Images/12_Heart-of-Stanford.webp'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+}
+
+.hero-content h1 {
+  color: #8C1515;
+  font-size: 3rem;
+}
+
+.hero-content p {
+  color: #333;
+  font-size: 1.25rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #8C1515;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+/* style.css */
+.cardinal-red {
+  color: #8C1515; /* Stanford Cardinal Red */
+}
+
+/* style.css */
+.cardinal-red {
+  color: #8C1515; /* Stanford Cardinal Red */
+}
+
+/* style.css */
+.cardinal-red {
+  color: #8C1515; /* Stanford Cardinal Red */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 10px; /* Adjust the margin as needed */
+  padding: 10px; /* Adjust the padding as needed */
+  border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  flex: 1;
+}
