@@ -5,7 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Owl Support</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #333;
+    }
+    h1, h2, h3 {
+      font-family: 'Crimson Text', serif;
+    }
+    .hero-section {
+      background: url('Images/12_Heart-of-Stanford.webp') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero-section p {
+      font-size: 1.5em;
+    }
+    .hero-section .btn {
+      background-color: #8C1515;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+    }
+    .hero-section .btn:hover {
+      background-color: #A62626;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer a {
+      color: #8C1515;
+      margin: 0 10px;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
@@ -33,6 +83,14 @@
     </div>
   </nav>
 
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Get in touch with our team for any support or inquiries.</p>
+    </div>
+  </section>
+
   <!-- Team Profiles Section -->
   <div class="container mt-5">
     <div class="row">
@@ -46,6 +104,7 @@
               <div class="card-body">
                 <h5 class="card-title">Stephanie Thomas</h5>
                 <p class="card-text">Manager Profile Description</p>
+                <button class="btn btn-primary" onclick="sendEmail('ricardez@stanford.edu')">Email</button>
               </div>
             </div>
           </div>
@@ -56,6 +115,7 @@
               <div class="card-body">
                 <h5 class="card-title">Philip Bailey</h5>
                 <p class="card-text">Lead Profile Description</p>
+                <button class="btn btn-primary" onclick="sendEmail('pbailey2@stanford.edu')">Email</button>
               </div>
             </div>
           </div>
@@ -68,6 +128,7 @@
               <div class="card-body">
                 <h5 class="card-title">Ivan Campos</h5>
                 <p class="card-text">Tech 1 Profile Description</p>
+                <button class="btn btn-primary" onclick="sendEmail('ivanc00@stanford.edu')">Email</button>
               </div>
             </div>
           </div>
@@ -78,6 +139,7 @@
               <div class="card-body">
                 <h5 class="card-title">Shane Lynch, MBA</h5>
                 <p class="card-text">Tech 2 Profile Description</p>
+                <button class="btn btn-primary" onclick="sendEmail('shanedwl@stanford.edu')">Email</button>
               </div>
             </div>
           </div>
@@ -90,6 +152,7 @@
               <div class="card-body">
                 <h5 class="card-title">Ruth Abebe</h5>
                 <p class="card-text">Intern Profile Description</p>
+                <button class="btn btn-primary" onclick="sendEmail('rutha89@stanford.edu')">Email</button>
               </div>
             </div>
           </div>
@@ -98,27 +161,32 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="https://uit.stanford.edu/services">Explore services</a>
-        <a href="https://uit.stanford.edu/service/techtraining/schedule">Get IT training</a>
-        <a href="https://uit.stanford.edu/service/authentication/twostep">Set up two-step authentication</a>
-        <a href="https://uit.stanford.edu/security/report-incident">Report a security incident</a>
-        <a href="https://uit.stanford.edu/guide/security">Learn Secure Computing Practices</a>
-      </div>
-      <div class="footer-contact">
-        <p>University IT, Stanford University</p>
-        <p>450 Jane Stanford Way, Stanford, CA 94305</p>
-        <p>Email: it-help@stanford.edu</p>
-        <p>Phone: (650) 725-4357</p>
-      </div>
-    </div>
-  </footer>
-
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    function sendEmail(email) {
+      window.location.href = `mailto:${email}`;
+    }
+  </script>
 </body>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://uit.stanford.edu/services">Explore services</a>
+      <a href="https://uit.stanford.edu/service/techtraining/schedule">Get IT training</a>
+      <a href="https://uit.stanford.edu/service/authentication/twostep">Set up two-step authentication</a>
+      <a href="https://uit.stanford.edu/security/report-incident">Report a security incident</a>
+      <a href="https://uit.stanford.edu/guide/security">Learn Secure Computing Practices</a>
+    </div>
+    <div class="footer-contact">
+      <p>University IT, Stanford University</p>
+      <p>450 Jane Stanford Way, Stanford, CA 94305</p>
+      <p>Email: it-help@stanford.edu</p>
+      <p>Phone: (650) 725-4357</p>
+    </div>
+  </div>
+</footer>
 </html>
