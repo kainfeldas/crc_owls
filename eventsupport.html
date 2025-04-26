@@ -8,26 +8,89 @@
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Source Sans Pro', sans-serif;
-      color: #333;
+    @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
     }
-    h1, h2, h3 {
-      font-family: 'Crimson Text', serif;
+    body {
+      margin: auto;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: auto;
+    }
+    section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    section .wave {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #4973ff;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+      transition: 0.5s;
+    }
+    section .wave span {
+      content: "";
+      position: absolute;
+      width: 325vh;
+      height: 325vh;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -75%);
+      background: #000;
+    }
+    .content {
+      position: relative;
+      
+      font-size: 4em;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+    section .wave span:nth-child(1) {
+      border-radius: 45%;
+      background: rgba(20, 20, 20, 1);
+      animation: animate 5s linear infinite;
+    }
+    section .wave span:nth-child(2) {
+      border-radius: 40%;
+      background: rgba(20, 20, 20, 0.5);
+      animation: animate 10s linear infinite;
+    }
+    section .wave span:nth-child(3) {
+      border-radius: 42.5%;
+      background: rgba(20, 20, 20, 0.5);
+      animation: animate 15s linear infinite;
+    }
+    @keyframes animate {
+      0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+      }
     }
     .hero-section {
-      background: url('Images/1697699532689.jpeg') no-repeat center center;
-      background-size: cover;
       color: white;
       padding: 100px 0;
       text-align: center;
+      background: none;
     }
     .hero-section h1 {
-      font-size: 3em;
+      font-size: .7em;
       margin-bottom: 20px;
     }
     .hero-section p {
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
     .hero-section .btn {
       background-color: #8C1515;
@@ -85,9 +148,14 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <div class="container">
+    <div class="wave">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="content">
       <h1>Event Support</h1>
-      <p>Our team can help manage your online meetings and webinars.</p>
+      <p>Empowering you</p>
     </div>
   </section>
 
@@ -134,20 +202,20 @@
 </body>
 
 <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="https://uit.stanford.edu/services">Explore services</a>
-        <a href="https://uit.stanford.edu/service/techtraining/schedule">Get IT training</a>
-        <a href="https://uit.stanford.edu/service/authentication/twostep">Set up two-step authentication</a>
-        <a href="https://uit.stanford.edu/security/report-incident">Report a security incident</a>
-        <a href="https://uit.stanford.edu/guide/security">Learn Secure Computing Practices</a>
-      </div>
-      <div class="footer-contact">
-        <p>University IT, Stanford University</p>
-        <p>450 Jane Stanford Way, Stanford, CA 94305</p>
-        <p>Email: it-help@stanford.edu</p>
-        <p>Phone: (650) 725-4357</p>
-      </div>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://uit.stanford.edu/services">Explore services</a>
+      <a href="https://uit.stanford.edu/service/techtraining/schedule">Get IT training</a>
+      <a href="https://uit.stanford.edu/service/authentication/twostep">Set up two-step authentication</a>
+      <a href="https://uit.stanford.edu/security/report-incident">Report a security incident</a>
+      <a href="https://uit.stanford.edu/guide/security">Learn Secure Computing Practices</a>
     </div>
-  </footer>
+    <div class="footer-contact">
+      <p>University IT, Stanford University</p>
+      <p>450 Jane Stanford Way, Stanford, CA 94305</p>
+      <p>Email: it-help@stanford.edu</p>
+      <p>Phone: (650) 725-4357</p>
+    </div>
+  </div>
+</footer>
 </html>
