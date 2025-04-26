@@ -25,7 +25,8 @@
   background-image: url('Images/12_Heart-of-Stanford.webp'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 100%;
+  min-height: 300px;
 }
 
 .hero-content {
@@ -42,7 +43,8 @@
 
 .hero-content p {
   color: #333;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
 /* Footer */
@@ -60,7 +62,7 @@ body {
 
 .footer {
   background-color: #8C1515;
-  color: white;
+  color: #8C1515;
   padding: 20px 0;
   text-align: center;
   border-top: 1px solid #ddd;
@@ -101,6 +103,7 @@ body {
   padding: 10px; /* Adjust the padding as needed */
   border: 1px solid #ddd; /* Optional: Add a border for better visibility */
   border-radius: 5px; /* Optional: Add rounded corners */
+  min-height: 250px; /* Set a minimum height for the cards */
 }
 
 .card-img-top {
@@ -128,4 +131,91 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar shrink */
+.navbar-shrink {
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  display: block;
+}
+
+/* Loading animation */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Parallax effect */
+.parallax {
+  background-image: url('Images/presentation-card.jpg');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Form validation */
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
+}
+
+.was-validated .form-control:valid {
+  border-color: #28a745;
 }
