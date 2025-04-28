@@ -58,6 +58,7 @@ body {
 .container {
   flex: 1;
   margin-bottom: 60px; /* Add margin to the bottom of the container */
+  padding: 0 15px; /* Add padding to prevent content overflow on mobile */
 }
 
 .footer {
@@ -218,4 +219,21 @@ html {
 
 .was-validated .form-control:valid {
   border-color: #28a745;
+}
+
+/* Ensure all bullet points are black */
+ul {
+  color: black !important;
+}
+
+ul ul {
+  color: black !important;
+}
+
+ul li {
+  color: black !important;
+}
+
+ul ul li {
+  color: black !important;
 }
